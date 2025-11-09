@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Globe, Shield, Users, Mail } from 'lucide-react';
+import { Award, Globe, Shield, Mail } from 'lucide-react';
+import dakotaPhoto from '../assets/dakota.jpeg';
 import { Section } from '../components/common/Section';
 import { Container } from '../components/common/Container';
 import { Card } from '../components/common/Card';
@@ -65,11 +66,13 @@ export const About: React.FC = () => {
 
           <Card>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Photo Placeholder */}
+              {/* Photo */}
               <div className="flex justify-center lg:justify-start">
-                <div className="w-48 h-48 rounded-lg bg-tactical-gray/30 border-2 border-accent-blue/30 flex items-center justify-center">
-                  <Users size={64} className="text-tactical-gray" />
-                </div>
+                <img
+                  src={dakotaPhoto}
+                  alt="Dakota McNeely"
+                  className="w-48 h-48 rounded-lg object-cover border-2 border-military-olive/50 shadow-lg"
+                />
               </div>
 
               {/* Bio Content */}
