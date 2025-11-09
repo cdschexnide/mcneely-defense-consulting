@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { Container } from '../common/Container';
-import { Button } from '../common/Button';
-import { DarkModeToggle } from '../common/DarkModeToggle';
-import { navLinks } from '../../data/company';
-import logo from '../../assets/logo.jpg';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { Container } from "../common/Container";
+import { Button } from "../common/Button";
+import { DarkModeToggle } from "../common/DarkModeToggle";
+import { navLinks } from "../../data/company";
+import logo from "../../assets/logo.jpg";
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,8 +17,8 @@ export const Header: React.FC = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -29,8 +29,8 @@ export const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || isMobileMenuOpen
-          ? 'bg-surface-dark/95 backdrop-blur-md shadow-lg border-b border-tactical-gray/30'
-          : 'bg-transparent'
+          ? "bg-surface-dark/95 backdrop-blur-md shadow-lg border-b border-tactical-gray/30"
+          : "bg-transparent"
       }`}
     >
       <Container>
@@ -39,25 +39,29 @@ export const Header: React.FC = () => {
           <Link to="/" className="flex items-center space-x-3 group">
             <img
               src={logo}
-              alt="McNeely Defense Consulting"
+              alt="LaRue Defense Consulting"
               className="h-12 w-12 rounded-lg object-cover ring-2 ring-tactical-gray/30 group-hover:ring-military-green/50 transition-all"
             />
             <div className="hidden md:block">
-              <div className="text-lg font-bold text-white">McNeely Defense Consulting</div>
-              <div className="text-xs text-gray-400">UAV • GNSS • Field Ops</div>
+              <div className="text-lg font-bold text-white">
+                McNeely Defense Consulting
+              </div>
+              <div className="text-xs text-gray-400">
+                UAV • GNSS • Field Ops
+              </div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {navLinks.map((link) => (
+            {navLinks.map(link => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={`text-sm font-medium transition-colors hover:text-military-olive-light ${
                   location.pathname === link.path
-                    ? 'text-military-olive-light'
-                    : 'text-gray-300'
+                    ? "text-military-olive-light"
+                    : "text-gray-300"
                 }`}
               >
                 {link.label}
@@ -90,14 +94,14 @@ export const Header: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-tactical-gray/30 animate-slide-down">
             <nav className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
+              {navLinks.map(link => (
                 <Link
                   key={link.path}
                   to={link.path}
                   className={`text-base font-medium transition-colors hover:text-military-olive-light ${
                     location.pathname === link.path
-                      ? 'text-military-olive-light'
-                      : 'text-gray-300'
+                      ? "text-military-olive-light"
+                      : "text-gray-300"
                   }`}
                 >
                   {link.label}
