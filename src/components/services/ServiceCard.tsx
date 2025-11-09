@@ -22,7 +22,6 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
           </div>
           <div className="flex-grow">
             <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-            <p className="text-military-olive-light font-semibold text-lg">{service.rate}</p>
           </div>
         </div>
 

@@ -29,15 +29,6 @@ Whether conducting live flight testing under GPS-denied conditions, troubleshoot
 
 export const resources: Resource[] = [
   {
-    id: "rate-chart",
-    title: "2025 Consulting Rate Chart",
-    description:
-      "Comprehensive breakdown of service rates, travel expenses, retainer options, and payment terms.",
-    fileUrl: "/src/docs/2025 Consulting Rate Chart.pdf",
-    fileSize: "510 KB",
-    fileType: "PDF",
-  },
-  {
     id: "capability-statement",
     title: "McNeely Defense Consulting Capability Statement",
     description:

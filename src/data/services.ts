@@ -6,7 +6,7 @@ export const services: Service[] = [
     title: 'UAV System Integration',
     description: 'System design, hardware setup, wiring, tuning, and validation.',
     detailedDescription: `McNeely Defense Consulting provides complete UAV system integration — from hardware wiring and power management to flight-controller setup and telemetry calibration. We specialize in Pixhawk-based platforms, ArduPilot configuration, and multi-sensor payload integration (GNSS, optical flow, telemetry, radar, and companion computers).`,
-    rate: '$175/hr or $1,200/day',
+    rate: '',
     icon: 'Drone',
     features: [
       'Wiring, UART/Bus mapping, and signal routing verification',
@@ -21,7 +21,7 @@ export const services: Service[] = [
     title: 'GNSS Protection & Navigation Consulting',
     description: 'Anti-jamming integration, spectrum testing, and multi-sensor fusion support.',
     detailedDescription: `We provide specialized consulting in GPS/GNSS anti-jamming, interference testing, and protected navigation architectures. Drawing from real-world field experience, we advise on resilient designs that integrate cleanly with modern autopilots and navigation systems.`,
-    rate: '$200/hr or $1,400/day',
+    rate: '',
     icon: 'Satellite',
     features: [
       'Antenna placement and cable routing optimization',
@@ -36,7 +36,7 @@ export const services: Service[] = [
     title: 'Field Testing & Validation',
     description: 'Flight testing, data collection, and post-mission analysis.',
     detailedDescription: `Our field engineers deliver end-to-end support for prototype, pre-production, and operational testing of unmanned systems. Services include flight verification, mission setup, and customer demonstrations in controlled or tactical environments.`,
-    rate: '$1,500/day (+ travel)',
+    rate: '',
     icon: 'Target',
     features: [
       'Dynamic flight testing and performance validation',
@@ -51,7 +51,7 @@ export const services: Service[] = [
     title: 'Operator Training & Mission Support',
     description: 'UAV pilot instruction, GCS setup, and mission readiness.',
     detailedDescription: `We provide structured training for engineering and operator teams on UAV configuration, GNSS troubleshooting, and resilient navigation practices. Each session includes live demonstration, documentation, and knowledge transfer to customer personnel.`,
-    rate: '$175/hr or $1,200/day',
+    rate: '',
     icon: 'GraduationCap',
     features: [
       'ArduPilot / Pixhawk setup and tuning',
@@ -66,7 +66,7 @@ export const services: Service[] = [
     title: 'Technical Advisory & Program Support',
     description: 'System architecture review, documentation, proposal or TRL guidance.',
     detailedDescription: `We assist engineering and program management teams with system design reviews, TRL advancement, and proposal development.`,
-    rate: '$150/hr',
+    rate: '',
     icon: 'FileText',
     features: [
       'Architecture and requirements analysis',
@@ -81,7 +81,7 @@ export const services: Service[] = [
     title: 'Troubleshooting / Forensic Diagnostics',
     description: 'Root-cause analysis for signal interference, flight anomalies, or GNSS failures.',
     detailedDescription: `Expert analysis and resolution of complex technical issues affecting UAV performance and navigation systems.`,
-    rate: '$175/hr',
+    rate: '',
     icon: 'Search',
     features: [
       'Flight log analysis and anomaly detection',
@@ -92,23 +92,3 @@ export const services: Service[] = [
     ]
   }
 ];
-
-export const pricingDetails = {
-  travel: [
-    { label: 'Travel Day Rate', value: '$650/day', note: 'full travel day, no field work' },
-    { label: 'Mileage / Local Travel', value: 'IRS rate (currently $0.67/mi)' },
-    { label: 'Flights / Lodging / Per Diem', value: 'Reimbursed at cost', note: 'DoD/GSA rates' },
-    { label: 'Equipment Rentals', value: 'Billed separately', note: 'e.g., spectrum analyzer, test drone' }
-  ],
-  retainer: [
-    { label: 'Monthly Retainer', value: '$3,000–$5,000/mo', note: 'advisory, remote support, docs' },
-    { label: 'Fixed-Scope Contract', value: 'Quoted after intake review' },
-    { label: 'DoD / Prime Subconsulting', value: 'Typically $140–$210/hr', note: 'by vehicle' }
-  ],
-  payment: [
-    { label: 'Deposit', value: '50% required to reserve on-site consulting' },
-    { label: 'Payment Terms', value: 'Net 15 for approved clients', note: 'otherwise payment due upon receipt' },
-    { label: 'Late Payments', value: '+2% weekly', note: '>15 days' },
-    { label: 'Travel Costs', value: 'Invoiced prior to mission' }
-  ]
-};
