@@ -1,14 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Award, Globe, Shield, Mail } from 'lucide-react';
-import dakotaPhoto from '../assets/dakota.jpeg';
-import { Section } from '../components/common/Section';
-import { Container } from '../components/common/Container';
-import { Card } from '../components/common/Card';
-import { Button } from '../components/common/Button';
-import { Badge } from '../components/common/Badge';
-import { companyInfo, teamMember, pastPerformance } from '../data/company';
-import { differentiators } from '../data/competencies';
+import React from "react";
+import { motion } from "framer-motion";
+import { Award, Globe, Shield, Mail } from "lucide-react";
+import dakotaPhoto from "../assets/dakota.jpeg";
+import { Section } from "../components/common/Section";
+import { Container } from "../components/common/Container";
+import { Card } from "../components/common/Card";
+import { Button } from "../components/common/Button";
+import { Badge } from "../components/common/Badge";
+import { companyInfo, teamMember, pastPerformance } from "../data/company";
+import { differentiators } from "../data/competencies";
 
 export const About: React.FC = () => {
   return (
@@ -25,9 +25,7 @@ export const About: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               About {companyInfo.name}
             </h1>
-            <p className="text-xl text-gray-400">
-              {companyInfo.tagline}
-            </p>
+            <p className="text-xl text-gray-400">{companyInfo.tagline}</p>
           </motion.div>
         </Container>
       </section>
@@ -37,13 +35,21 @@ export const About: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <Card>
             <div className="text-center">
-              <Shield size={48} className="text-military-green-light mx-auto mb-6" />
-              <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
+              <Shield
+                size={48}
+                className="text-military-green-light mx-auto mb-6"
+              />
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Our Mission
+              </h2>
               <p className="text-lg text-gray-300 leading-relaxed">
-                To deliver precision UAV integration, protected navigation systems, and field-proven
-                solutions that empower defense technology programs to succeed in the most challenging
-                operational environments. We combine hands-on technical expertise with deep understanding
-                of defense program requirements to provide rapid, effective support for mission-critical systems.
+                To deliver precision UAV integration, protected navigation
+                systems, and field-proven solutions that empower defense
+                technology programs to succeed in the most challenging
+                operational environments. We combine hands-on technical
+                expertise with deep understanding of defense program
+                requirements to provide rapid, effective support for
+                mission-critical systems.
               </p>
             </div>
           </Card>
@@ -70,7 +76,7 @@ export const About: React.FC = () => {
               <div className="flex justify-center lg:justify-start">
                 <img
                   src={dakotaPhoto}
-                  alt="Dakota McNeely"
+                  alt="Dakota LARUE McNeely"
                   className="w-48 h-48 rounded-lg object-cover border-2 border-military-olive/50 shadow-lg"
                 />
               </div>
@@ -78,8 +84,12 @@ export const About: React.FC = () => {
               {/* Bio Content */}
               <div className="lg:col-span-2 space-y-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-1">{teamMember.name}</h3>
-                  <p className="text-military-olive-light font-semibold mb-4">{teamMember.title}</p>
+                  <h3 className="text-2xl font-bold text-white mb-1">
+                    {teamMember.name}
+                  </h3>
+                  <p className="text-military-olive-light font-semibold mb-4">
+                    {teamMember.title}
+                  </p>
                   <Badge variant="info" className="mr-2">
                     <Mail size={12} className="mr-1" />
                     {teamMember.email}
@@ -87,7 +97,7 @@ export const About: React.FC = () => {
                 </div>
 
                 <div className="space-y-4 text-gray-300 leading-relaxed">
-                  {teamMember.bio.split('\n\n').map((paragraph, index) => (
+                  {teamMember.bio.split("\n\n").map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>
                   ))}
                 </div>
@@ -126,8 +136,12 @@ export const About: React.FC = () => {
                       <Award size={24} className="text-military-olive-light" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                      <p className="text-gray-400 text-sm">{item.description}</p>
+                      <h3 className="text-lg font-bold text-white mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 </Card>
@@ -146,7 +160,10 @@ export const About: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <Globe size={48} className="text-military-green-light mx-auto mb-4" />
+            <Globe
+              size={48}
+              className="text-military-green-light mx-auto mb-4"
+            />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Past Performance
             </h2>
@@ -183,19 +200,27 @@ export const About: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <p className="text-sm text-gray-400 mb-1">Legal Structure</p>
-                <p className="text-white font-semibold">{companyInfo.legalStructure}</p>
+                <p className="text-white font-semibold">
+                  {companyInfo.legalStructure}
+                </p>
               </div>
               <div>
                 <p className="text-sm text-gray-400 mb-1">Registered In</p>
-                <p className="text-white font-semibold">{companyInfo.registeredIn}</p>
+                <p className="text-white font-semibold">
+                  {companyInfo.registeredIn}
+                </p>
               </div>
               <div>
                 <p className="text-sm text-gray-400 mb-1">Location</p>
-                <p className="text-white font-semibold">{companyInfo.location}</p>
+                <p className="text-white font-semibold">
+                  {companyInfo.location}
+                </p>
               </div>
               <div>
                 <p className="text-sm text-gray-400 mb-1">Service Area</p>
-                <p className="text-white font-semibold">CONUS / OCONUS Support Available</p>
+                <p className="text-white font-semibold">
+                  CONUS / OCONUS Support Available
+                </p>
               </div>
               <div className="md:col-span-2">
                 <p className="text-sm text-gray-400 mb-2">NAICS Codes</p>

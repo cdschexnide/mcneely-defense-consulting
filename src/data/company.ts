@@ -17,9 +17,9 @@ export const companyInfo: CompanyInfo = {
 };
 
 export const teamMember: TeamMember = {
-  name: "Dakota McNeely",
+  name: "Dakota LARUE McNeely",
   title: "Founder",
-  bio: `Dakota McNeely brings extensive hands-on experience in UAV integration, GNSS protection systems, and field operations support for defense technology programs. With a proven track record supporting Tier-1 prime contractors and field deployments across North America and allied partner nations, Dakota specializes in vendor-agnostic solutions that deliver test-proven performance under challenging conditions.
+  bio: `Dakota LARUE McNeely brings extensive hands-on experience in UAV integration, GNSS protection systems, and field operations support for defense technology programs. With a proven track record supporting Tier-1 prime contractors and field deployments across North America and allied partner nations, Dakota specializes in vendor-agnostic solutions that deliver test-proven performance under challenging conditions.
 
 His expertise spans full-stack UAV platform design, anti-jamming system integration, spectrum testing, and mission-critical field validation. Dakota's deep understanding of DoD program structures, export controls, and defense integration workflows enables him to provide rapid, effective solutions for complex technical challenges.
 
