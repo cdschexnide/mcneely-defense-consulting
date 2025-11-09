@@ -5,7 +5,7 @@ import { Section } from '../components/common/Section';
 import { Container } from '../components/common/Container';
 import { Card } from '../components/common/Card';
 import { Badge } from '../components/common/Badge';
-import { ContactForm } from '../components/contact/ContactForm';
+import { ClientIntakeForm } from '../components/contact/ClientIntakeForm';
 import { companyInfo } from '../data/company';
 
 export const Contact: React.FC = () => {
@@ -24,8 +24,8 @@ export const Contact: React.FC = () => {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-400">
-              Ready to discuss your UAV integration, GNSS protection, or field operations needs?
-              Reach out and we'll respond within 24 hours.
+              Complete our comprehensive intake form to help us understand your requirements.
+              We'll respond within 1 business day.
             </p>
           </motion.div>
         </Container>
@@ -37,8 +37,12 @@ export const Contact: React.FC = () => {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <Card>
-              <h2 className="text-2xl font-bold text-white mb-6">Send Us a Message</h2>
-              <ContactForm />
+              <h2 className="text-2xl font-bold text-white mb-6">Client Intake Form</h2>
+              <p className="text-gray-400 mb-6">
+                Please complete this comprehensive intake form to help us understand your platform,
+                mission requirements, and support needs.
+              </p>
+              <ClientIntakeForm />
             </Card>
           </div>
 
