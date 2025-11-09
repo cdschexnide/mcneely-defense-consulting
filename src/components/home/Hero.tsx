@@ -107,7 +107,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-16 flex flex-wrap gap-6 text-sm"
+            className="mt-16 mb-12 md:mb-0 flex flex-wrap gap-6 text-sm"
           >
             <div className="flex items-center space-x-2 text-gray-400">
               <div className="w-2 h-2 rounded-full bg-accent-red"></div>
