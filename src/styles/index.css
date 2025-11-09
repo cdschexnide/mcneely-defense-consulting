@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface-dark text-gray-100 antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body.light {
+    @apply bg-surface-light text-tactical-slate;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-tactical-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-tactical-gray rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-tactical-gray-light;
+  }
+
+  /* Grid pattern background */
+  .grid-pattern {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-military-olive-light to-accent-red-light bg-clip-text text-transparent;
+  }
+
+  /* Focus styles */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-military-olive focus:ring-offset-2 focus:ring-offset-tactical-dark;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
