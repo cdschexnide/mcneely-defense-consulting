@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
-import { Section } from '../components/common/Section';
-import { Container } from '../components/common/Container';
-import { Card } from '../components/common/Card';
-import { Badge } from '../components/common/Badge';
-import { ClientIntakeForm } from '../components/contact/ClientIntakeForm';
-import { companyInfo } from '../data/company';
+import React from "react";
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Section } from "../components/common/Section";
+import { Container } from "../components/common/Container";
+import { Card } from "../components/common/Card";
+import { Badge } from "../components/common/Badge";
+import { ClientIntakeForm } from "../components/contact/ClientIntakeForm";
+import { companyInfo } from "../data/company";
 
 export const Contact: React.FC = () => {
   return (
@@ -24,8 +24,8 @@ export const Contact: React.FC = () => {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-400">
-              Complete our comprehensive intake form to help us understand your requirements.
-              We'll respond within 1 business day.
+              Complete our comprehensive intake form to help us understand your
+              requirements.
             </p>
           </motion.div>
         </Container>
@@ -37,10 +37,13 @@ export const Contact: React.FC = () => {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <Card>
-              <h2 className="text-2xl font-bold text-white mb-6">Client Intake Form</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Client Intake Form
+              </h2>
               <p className="text-gray-400 mb-6">
-                Please complete this comprehensive intake form to help us understand your platform,
-                mission requirements, and support needs.
+                Please complete this comprehensive intake form to help us
+                understand your platform, mission requirements, and support
+                needs.
               </p>
               <ClientIntakeForm />
             </Card>
@@ -50,13 +53,18 @@ export const Contact: React.FC = () => {
           <div className="space-y-6">
             {/* Contact Details */}
             <Card>
-              <h3 className="text-lg font-bold text-white mb-4">Contact Information</h3>
+              <h3 className="text-lg font-bold text-white mb-4">
+                Contact Information
+              </h3>
               <div className="space-y-4">
                 <a
                   href={`mailto:${companyInfo.email}`}
                   className="flex items-start space-x-3 text-gray-300 hover:text-military-olive-light transition-colors group"
                 >
-                  <Mail size={20} className="mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                  <Mail
+                    size={20}
+                    className="mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"
+                  />
                   <div>
                     <p className="text-sm text-gray-400">Email</p>
                     <p className="font-medium">{companyInfo.email}</p>
@@ -64,10 +72,13 @@ export const Contact: React.FC = () => {
                 </a>
 
                 <a
-                  href={`tel:${companyInfo.phone.replace(/\D/g, '')}`}
+                  href={`tel:${companyInfo.phone.replace(/\D/g, "")}`}
                   className="flex items-start space-x-3 text-gray-300 hover:text-military-olive-light transition-colors group"
                 >
-                  <Phone size={20} className="mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                  <Phone
+                    size={20}
+                    className="mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"
+                  />
                   <div>
                     <p className="text-sm text-gray-400">Phone</p>
                     <p className="font-medium">{companyInfo.phone}</p>
@@ -94,7 +105,9 @@ export const Contact: React.FC = () => {
 
             {/* Service Area */}
             <Card>
-              <h3 className="text-lg font-bold text-white mb-4">Service Area</h3>
+              <h3 className="text-lg font-bold text-white mb-4">
+                Service Area
+              </h3>
               <div className="space-y-3">
                 <Badge variant="success" className="w-full justify-center py-2">
                   CONUS Support Available
@@ -103,21 +116,25 @@ export const Contact: React.FC = () => {
                   OCONUS Support Available
                 </Badge>
                 <p className="text-sm text-gray-400 pt-2">
-                  On-site and remote consulting available across the continental United States
-                  and select international locations.
+                  On-site and remote consulting available across the continental
+                  United States and select international locations.
                 </p>
               </div>
             </Card>
 
             {/* What to Expect */}
             <Card>
-              <h3 className="text-lg font-bold text-white mb-4">What to Expect</h3>
+              <h3 className="text-lg font-bold text-white mb-4">
+                What to Expect
+              </h3>
               <ol className="space-y-3 text-sm text-gray-300">
                 <li className="flex items-start space-x-2">
                   <span className="w-6 h-6 rounded-full bg-military-olive/20 text-military-olive-light flex items-center justify-center flex-shrink-0 text-xs font-bold">
                     1
                   </span>
-                  <span>Initial consultation to understand your requirements</span>
+                  <span>
+                    Initial consultation to understand your requirements
+                  </span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="w-6 h-6 rounded-full bg-military-olive/20 text-military-olive-light flex items-center justify-center flex-shrink-0 text-xs font-bold">
@@ -144,12 +161,15 @@ export const Contact: React.FC = () => {
             Southeast Texas Based
           </h2>
           <p className="text-gray-400 mb-6">
-            Strategically located in Southeast Texas with rapid deployment capabilities
-            throughout North America and allied partner nations.
+            Strategically located in Southeast Texas with rapid deployment
+            capabilities throughout North America and allied partner nations.
           </p>
           <div className="bg-tactical-dark/50 border border-tactical-gray/30 rounded-lg p-12 flex items-center justify-center">
             <div className="text-center">
-              <MapPin size={48} className="text-military-green-light mx-auto mb-4" />
+              <MapPin
+                size={48}
+                className="text-military-green-light mx-auto mb-4"
+              />
               <p className="text-gray-400">Map visualization coming soon</p>
             </div>
           </div>

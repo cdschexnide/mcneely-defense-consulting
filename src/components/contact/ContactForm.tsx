@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { Send, CheckCircle } from 'lucide-react';
-import { Button } from '../common/Button';
-import { ContactFormData } from '../../types';
-import { services } from '../../data/services';
+import React, { useState } from "react";
+import { Send, CheckCircle } from "lucide-react";
+import { Button } from "../common/Button";
+import { ContactFormData } from "../../types";
+import { services } from "../../data/services";
 
 export const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    serviceInterest: '',
-    projectDescription: '',
-    budgetTimeline: ''
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    serviceInterest: "",
+    projectDescription: "",
+    budgetTimeline: "",
   });
 
   const [errors, setErrors] = useState<Partial<ContactFormData>>({});
@@ -23,17 +23,17 @@ export const ContactForm: React.FC = () => {
     const newErrors: Partial<ContactFormData> = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = "Name is required";
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Invalid email address';
+      newErrors.email = "Invalid email address";
     }
 
     if (!formData.projectDescription.trim()) {
-      newErrors.projectDescription = 'Project description is required';
+      newErrors.projectDescription = "Project description is required";
     }
 
     setErrors(newErrors);
@@ -52,26 +52,30 @@ export const ContactForm: React.FC = () => {
     // Simulate form submission (replace with actual API call later)
     await new Promise(resolve => setTimeout(resolve, 1000));
 
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     setIsSubmitted(true);
     setIsSubmitting(false);
 
     // Reset form after 3 seconds
     setTimeout(() => {
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        serviceInterest: '',
-        projectDescription: '',
-        budgetTimeline: ''
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        serviceInterest: "",
+        projectDescription: "",
+        budgetTimeline: "",
       });
       setIsSubmitted(false);
     }, 3000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     // Clear error when user starts typing
@@ -83,11 +87,12 @@ export const ContactForm: React.FC = () => {
   if (isSubmitted) {
     return (
       <div className="bg-military-green/20 border border-military-green rounded-lg p-8 text-center">
-        <CheckCircle size={48} className="text-military-green-light mx-auto mb-4" />
+        <CheckCircle
+          size={48}
+          className="text-military-green-light mx-auto mb-4"
+        />
         <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
-        <p className="text-gray-300">
-          Your message has been received. We'll respond within 24 hours.
-        </p>
+        <p className="text-gray-300">Your message has been received.</p>
       </div>
     );
   }
@@ -96,7 +101,10 @@ export const ContactForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Name */}
       <div>
-        <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">
+        <label
+          htmlFor="name"
+          className="block text-sm font-semibold text-white mb-2"
+        >
           Name <span className="text-accent-blue">*</span>
         </label>
         <input
@@ -106,16 +114,21 @@ export const ContactForm: React.FC = () => {
           value={formData.name}
           onChange={handleChange}
           className={`w-full px-4 py-3 bg-tactical-dark border ${
-            errors.name ? 'border-red-500' : 'border-tactical-gray/30'
+            errors.name ? "border-red-500" : "border-tactical-gray/30"
           } rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-military-olive transition-colors`}
           placeholder="Your full name"
         />
-        {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
+        {errors.name && (
+          <p className="text-red-400 text-sm mt-1">{errors.name}</p>
+        )}
       </div>
 
       {/* Email */}
       <div>
-        <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
+        <label
+          htmlFor="email"
+          className="block text-sm font-semibold text-white mb-2"
+        >
           Email <span className="text-accent-blue">*</span>
         </label>
         <input
@@ -125,16 +138,21 @@ export const ContactForm: React.FC = () => {
           value={formData.email}
           onChange={handleChange}
           className={`w-full px-4 py-3 bg-tactical-dark border ${
-            errors.email ? 'border-red-500' : 'border-tactical-gray/30'
+            errors.email ? "border-red-500" : "border-tactical-gray/30"
           } rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-military-olive transition-colors`}
           placeholder="your.email@company.com"
         />
-        {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
+        {errors.email && (
+          <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+        )}
       </div>
 
       {/* Company */}
       <div>
-        <label htmlFor="company" className="block text-sm font-semibold text-white mb-2">
+        <label
+          htmlFor="company"
+          className="block text-sm font-semibold text-white mb-2"
+        >
           Company / Organization
         </label>
         <input
@@ -150,7 +168,10 @@ export const ContactForm: React.FC = () => {
 
       {/* Phone */}
       <div>
-        <label htmlFor="phone" className="block text-sm font-semibold text-white mb-2">
+        <label
+          htmlFor="phone"
+          className="block text-sm font-semibold text-white mb-2"
+        >
           Phone
         </label>
         <input
@@ -166,7 +187,10 @@ export const ContactForm: React.FC = () => {
 
       {/* Service Interest */}
       <div>
-        <label htmlFor="serviceInterest" className="block text-sm font-semibold text-white mb-2">
+        <label
+          htmlFor="serviceInterest"
+          className="block text-sm font-semibold text-white mb-2"
+        >
           Service Interest
         </label>
         <select
@@ -187,7 +211,10 @@ export const ContactForm: React.FC = () => {
 
       {/* Project Description */}
       <div>
-        <label htmlFor="projectDescription" className="block text-sm font-semibold text-white mb-2">
+        <label
+          htmlFor="projectDescription"
+          className="block text-sm font-semibold text-white mb-2"
+        >
           Project Description <span className="text-accent-blue">*</span>
         </label>
         <textarea
@@ -197,18 +224,25 @@ export const ContactForm: React.FC = () => {
           onChange={handleChange}
           rows={5}
           className={`w-full px-4 py-3 bg-tactical-dark border ${
-            errors.projectDescription ? 'border-red-500' : 'border-tactical-gray/30'
+            errors.projectDescription
+              ? "border-red-500"
+              : "border-tactical-gray/30"
           } rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-military-olive transition-colors resize-none`}
           placeholder="Describe your project requirements and objectives..."
         />
         {errors.projectDescription && (
-          <p className="text-red-400 text-sm mt-1">{errors.projectDescription}</p>
+          <p className="text-red-400 text-sm mt-1">
+            {errors.projectDescription}
+          </p>
         )}
       </div>
 
       {/* Budget / Timeline */}
       <div>
-        <label htmlFor="budgetTimeline" className="block text-sm font-semibold text-white mb-2">
+        <label
+          htmlFor="budgetTimeline"
+          className="block text-sm font-semibold text-white mb-2"
+        >
           Budget / Timeline
         </label>
         <input
@@ -229,8 +263,11 @@ export const ContactForm: React.FC = () => {
         className="w-full group"
         disabled={isSubmitting}
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
-        <Send size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+        {isSubmitting ? "Sending..." : "Send Message"}
+        <Send
+          size={20}
+          className="ml-2 group-hover:translate-x-1 transition-transform"
+        />
       </Button>
 
       <p className="text-sm text-gray-400 text-center">

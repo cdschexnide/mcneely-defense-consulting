@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Clock } from 'lucide-react';
-import { Section } from '../common/Section';
-import { Button } from '../common/Button';
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, Clock } from "lucide-react";
+import { Section } from "../common/Section";
+import { Button } from "../common/Button";
 
 export const ContactCTA: React.FC = () => {
   return (
@@ -21,14 +21,17 @@ export const ContactCTA: React.FC = () => {
             Ready to Discuss Your Project?
           </h2>
           <p className="text-lg text-gray-300 mb-8">
-            Get expert consultation on UAV integration, GNSS protection, and field operations support.
-            We respond within 24 hours.
+            Get expert consultation on UAV integration, GNSS protection, and
+            field operations support.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Button to="/contact" size="lg" className="group">
               Request Consultation
-              <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight
+                size={20}
+                className="ml-2 group-hover:translate-x-1 transition-transform"
+              />
             </Button>
             <Button to="/services" size="lg" variant="outline">
               View All Services
