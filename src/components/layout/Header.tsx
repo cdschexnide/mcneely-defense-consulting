@@ -39,12 +39,12 @@ export const Header: React.FC = () => {
           <Link to="/" className="flex items-center space-x-3 group">
             <img
               src={logo}
-              alt="LaRue Defense Consulting"
+              alt="McNeely Defense Consulting"
               className="h-12 w-12 rounded-lg object-cover ring-2 ring-tactical-gray/30 group-hover:ring-military-green/50 transition-all"
             />
             <div className="hidden md:block">
               <div className="text-lg font-bold text-white">
-                McNeely Defense Consulting
+                LaRue Defense Consulting
               </div>
               <div className="text-xs text-gray-400">
                 UAV • GNSS • Field Ops
